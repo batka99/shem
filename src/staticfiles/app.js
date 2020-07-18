@@ -949,7 +949,7 @@ function Tois103taslahbutton() {
       shinatoitzalgah();
     }
   }
-  if (ash103 === false) {
+  if (ash103 === false || toissh105r) {
     ash103taslah();
     if (shus103) {
       gt103taslah();
@@ -962,36 +962,105 @@ function Tois103taslahbutton() {
       }
     }
   }
+
+  if (ash103 && toissh105r) {
+    if (ash103 || toissh105r) {
+      ash103zalgah();
+      gt103zalgah();
+      if (tasluur103) {
+        shinsghtai103zalgah();
+        if (shins103) {
+          shina110kv1rzalgah();
+          shin1r103r = true;
+        }
+      }
+    }
+  }
 }
 
 function shus103ZalgahButton() {
   shus103 = true;
   shus103zalgah();
+
+  if (ash103 || toissh105r) {
+    gt103zalgah();
+    if (tasluur103) {
+      shinsghtai103zalgah();
+      if (shins103) {
+        shina110kv1rzalgah();
+        shin1r103r = true;
+      }
+    }
+  }
 }
 
 function shus103TaslahButton() {
   shus103 = false;
   shus103taslah();
+  if (ash103 || toissh105r) {
+    gt103taslah();
+    if (tasluur103) {
+      shinsghtai103taslah();
+      if (shins103) {
+        shina110kv1rtaslah();
+        shin1r103r = true;
+      }
+    }
+  }
 }
 
 function tasluur103ZalgahButton() {
   tasluur103 = true;
   tasluur103zalgah();
+  if (ash103 || toissh105r) {
+    if (shus103) {
+      shinsghtai103zalgah();
+      if (shins103) {
+        shina110kv1rzalgah();
+        shin1r103r = true;
+      }
+    }
+  }
 }
 
 function tasluur103TaslahButton() {
   tasluur103 = false;
   tasluur103taslah();
+  if (ash103 || toissh105r) {
+    if (shus103) {
+      shinsghtai103taslah();
+      if (shins103) {
+        shina110kv1rtaslah();
+        shin1r103r = false;
+      }
+    }
+  }
 }
 
 function shins103ZalgahButton() {
   shins103 = true;
   shins103zalgah();
+  if (ash103 || toissh105r) {
+    if (shus103) {
+      if (tasluur103) {
+        shina110kv1rzalgah();
+        shin1r103r = true;
+      }
+    }
+  }
 }
 
 function shins103TaslahButton() {
   shins103 = false;
   shins103taslah();
+  if (ash103 || toissh105r) {
+    if (shus103) {
+      if (tasluur103) {
+        shina110kv1rtaslah();
+        shin1r103r = false;
+      }
+    }
+  }
 }
 
 /////////////////////////////////////////////105 АШ //////////////////////////////////////////
