@@ -1,20 +1,49 @@
 // 110кВ тал //
 var ash103,
   ash104,
-  ash105 = false;
+  ash105,
+  ash106,
+  ashsurugaA,
+  ashsurugaB = false;
 var shus103,
+  shus104,
   shus105,
-  shus104 = false;
+  shus106,
+  shussurugaA,
+  shussurugaB = false;
 var tasluur103,
+  tasluur104,
   tasluur105,
-  tasluur104 = false;
+  tasluur106,
+  tasluurSurugaA,
+  tasluurSurugaB = false;
 var shins103,
   shins104,
-  shins105 = false;
+  shins105,
+  shins106,
+  shinssurugaA,
+  shinssurugaB = false;
 var tois103,
   tois104,
-  tois105 = true;
-var shin1r = true;
+  tois105,
+  tois106,
+  toissurugaA,
+  toisSurugaA = false;
+var gt103,
+  gt104,
+  gt105,
+  gt106,
+  gtsurugaA,
+  gtsurugaB = false;
+var shin1r103r,
+  toissh103r,
+  toissh105r,
+  toisshsurugaAr,
+  shin1r105r,
+  shin1rSurugaAr = false;
+var shina110kv1,
+  shina110kv2r,
+  shinatoiruu110kv = false;
 
 //--------------------110 kv iin shugamuud--------------------
 
@@ -22,10 +51,23 @@ var shin1r = true;
 function ash103zalgah() {
   document.getElementById("ash103").classList.remove("tasarhai");
   document.getElementById("ash103").classList.add("zalgaatai");
+  document.getElementById("ash103nemelt").classList.remove("tasarhai");
+  document.getElementById("ash103nemelt").classList.add("zalgaatai");
 }
 function ash103taslah() {
   document.getElementById("ash103").classList.remove("zalgaatai");
   document.getElementById("ash103").classList.add("tasarhai");
+  document.getElementById("ash103nemelt").classList.remove("zalgaatai");
+  document.getElementById("ash103nemelt").classList.add("tasarhai");
+}
+
+function ash103nemeltzalgah() {
+  document.getElementById("ash103nemelt").classList.remove("tasarhai");
+  document.getElementById("ash103nemelt").classList.add("zalgaatai");
+}
+function ash103nemeltaslah() {
+  document.getElementById("ash103nemelt").classList.remove("zalgaatai");
+  document.getElementById("ash103nemelt").classList.add("tasarhai");
 }
 
 // ash 104
@@ -824,41 +866,51 @@ function shinsghtaisurugaBtaslah() {
 //---------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------------------------------------------//
 
-// 103 zalgah
+// 103 zalgah taslah
 function ash103ZalgahButton() {
   ash103 = true;
   ash103zalgah();
-  if (tois103 === true) {
-    shinatoitzalgah();
-  }
-  if (shus103 === true) {
+  if (shus103) {
     gt103zalgah();
-    if (tasluur103 === true) {
+    if (tasluur103) {
       shinsghtai103zalgah();
-      if (shins103 === true) {
+      if (shins103) {
         shina110kv1rzalgah();
+        shin1r103r = true;
       }
     }
+  }
+  if (tois103) {
+    shinatoitzalgah();
+    toissh103r = true;
   }
 }
 
 function ash103TaslahButton() {
   ash103 = false;
   ash103taslah();
-  if (tois103 === true) {
-    shinatoittaslah();
-  }
-  if (shus103 === true) {
+  if (shus103) {
     gt103taslah();
-    if (tasluur103 === true) {
+    if (tasluur103) {
       shinsghtai103taslah();
-      if (shins103 === true) {
+      if (shins103) {
         shina110kv1rtaslah();
-        if (shins105 === true || shins104 === true) {
-          shina110kv1rzalgah();
+        shin1r103r = false;
+      }
+    }
+  }
+  if (tois103) {
+    shinatoittaslah();
+    toissh103r = false;
+    if (toissh105r) {
+      ash103zalgah();
+      shinatoitzalgah();
+      if (shus103) {
+        gt103zalgah();
+        if (tasluur103) {
           shinsghtai103zalgah();
-          if (shins103 === false) {
-            shinsghtai103taslah();
+          if (shins103) {
+            shina110kv1rzalgah();
           }
         }
       }
@@ -869,504 +921,141 @@ function ash103TaslahButton() {
 function Tois103zalgahbutton() {
   tois103 = true;
   tois103zalgah();
-  if (ash103 === true) {
+  if (ash103) {
     shinatoitzalgah();
+    toissh103r = true;
+  }
+  if (toissh105r) {
+    ash103zalgah();
+    if (shus103) {
+      gt103zalgah();
+      if (tasluur103) {
+        shinsghtai103zalgah();
+        if (shins103) {
+          shina110kv1rzalgah();
+          shin1r103r = true;
+        }
+      }
+    }
   }
 }
 
 function Tois103taslahbutton() {
   tois103 = false;
   tois103taslah();
-  if (ash103 === true) {
+  if (ash103) {
     shinatoittaslah();
+    if (toissh105r) {
+      shinatoitzalgah();
+    }
+  }
+  if (ash103 === false) {
+    ash103taslah();
+    if (shus103) {
+      gt103taslah();
+      if (tasluur103) {
+        shinsghtai103taslah();
+        if (shins103) {
+          shina110kv1rtaslah();
+          shin1r105r = false;
+        }
+      }
+    }
   }
 }
 
 function shus103ZalgahButton() {
   shus103 = true;
   shus103zalgah();
-  if (ash103 === true) {
-    gt103zalgah();
-    if (tasluur103 === true) {
-      shinsghtai103zalgah();
-      if (shins103 === true) {
-        shina110kv1rzalgah();
-      }
-    }
-  }
 }
 
 function shus103TaslahButton() {
   shus103 = false;
   shus103taslah();
-  if (ash103 === true) {
-    gt103taslah();
-    if (tasluur103 === true) {
-      shinsghtai103taslah();
-      if (shins103 === true) {
-        shina110kv1rtaslah();
-        if (shins105 === true || shins104 === true) {
-          shina110kv1rzalgah();
-          shinsghtai103zalgah();
-          if (shins103 === false) {
-            shinsghtai103taslah();
-          }
-        }
-      }
-    }
-  }
 }
 
 function tasluur103ZalgahButton() {
   tasluur103 = true;
   tasluur103zalgah();
-  if (shus103 === true) {
-    gt103zalgah();
-    shinsghtai103zalgah();
-    if (shins103 === true) {
-      shina110kv1rzalgah();
-    }
-  }
 }
 
 function tasluur103TaslahButton() {
   tasluur103 = false;
   tasluur103taslah();
-  if (shus103 === true) {
-    shinsghtai103taslah();
-    if (shins103 === true) {
-      shina110kv1rtaslah();
-      if (shins105 === true || shins104 === true) {
-        shina110kv1rzalgah();
-        shinsghtai103zalgah();
-        if (shins103 === false) {
-          shinsghtai103taslah();
-        }
-      }
-    }
-  }
 }
 
 function shins103ZalgahButton() {
   shins103 = true;
   shins103zalgah();
-  if (tasluur103 === true) {
-    shina110kv1rzalgah();
-  }
 }
 
 function shins103TaslahButton() {
   shins103 = false;
   shins103taslah();
-  if (tasluur103 === true) {
-    shina110kv1rtaslah();
-    if (shins105 === true || shins104 === true) {
-      shina110kv1rzalgah();
-      shinsghtai103zalgah();
-      if (shins103 === false) {
-        shinsghtai103taslah();
-      }
-    }
-  } else {
-    shinsghtai103taslah();
-  }
 }
 
-//103 taslah
+/////////////////////////////////////////////105 АШ //////////////////////////////////////////
 
-// 104 Ash iin button ehlel
-
-// 104 zalgah
-function ash104ZalgahButton() {
-  ash104 = true;
-  ash104zalgah();
-  if (tois104 === true) {
-    shinatoitzalgah();
-  }
-  if (shus104 === true) {
-    gt104zalgah();
-    if (tasluur104 === true) {
-      shinsghtai104zalgah();
-      if (shins104 === true) {
-        shina110kv2rzalgah();
-      }
-    }
-  }
-}
-
-function ash104TaslahButton() {
-  ash104 = false;
-  ash104taslah();
-  if (tois104 === true) {
-    shinatoittaslah();
-  }
-  if (shus104 === true) {
-    gt104taslah();
-    if (tasluur104 === true) {
-      shinsghtai104taslah();
-      if (shins104 === true) {
-        shina110kv1rtaslah();
-        if (shins105 === true || shins103 === true) {
-          shina110kv2rzalgah();
-          shinsghtai104zalgah();
-          if (shins104 === false) {
-            shinsghtai104taslah();
-          }
-        }
-      }
-    }
-  }
-}
-
-function Tois104zalgahbutton() {
-  tois104 = true;
-  tois104zalgah();
-  if (ash104 === true) {
-    shinatoitzalgah();
-  }
-}
-
-function Tois104taslahbutton() {
-  tois104 = false;
-  tois104taslah();
-  if (ash104 === true) {
-    shinatoittaslah();
-  }
-}
-
-function shus104ZalgahButton() {
-  shus104 = true;
-  shus104zalgah();
-  if (ash104 === true) {
-    gt104zalgah();
-    if (tasluur104 === true) {
-      shinsghtai104zalgah();
-      if (shins104 === true) {
-        shina110kv2rzalgah();
-      }
-    }
-  }
-}
-
-function shus104TaslahButton() {
-  shus104 = false;
-  shus104taslah();
-  if (ash104 === true) {
-    gt104taslah();
-    if (tasluur104 === true) {
-      shinsghtai104taslah();
-      if (shins104 === true) {
-        shina110kv1rtaslah();
-        if (shins105 === true || shins103 === true) {
-          shina110kv2rzalgah();
-          shinsghtai104zalgah();
-          if (shins104 === false) {
-            shinsghtai104taslah();
-          }
-        }
-      }
-    }
-  }
-}
-
-function tasluur104ZalgahButton() {
-  tasluur104 = true;
-  tasluur104zalgah();
-  if (shus104 === true) {
-    gt104zalgah();
-    shinsghtai104zalgah();
-    if (shins104 === true) {
-      shina110kv2rzalgah();
-    }
-  }
-}
-
-function tasluur104TaslahButton() {
-  tasluur104 = false;
-  tasluur104taslah();
-  if (shus104 === true) {
-    shinsghtai104taslah();
-    if (shins104 === true) {
-      shina110kv1rtaslah();
-      if (shins105 === true || shins103 === true) {
-        shina110kv2rzalgah();
-        shinsghtai104zalgah();
-        if (shins104 === false) {
-          shinsghtai104taslah();
-        }
-      }
-    }
-  }
-}
-
-function shins104ZalgahButton() {
-  shins104 = true;
-  shins104zalgah();
-  if (tasluur104 === true) {
-    shina110kv2rzalgah();
-  }
-}
-
-function shins104TaslahButton() {
-  shins104 = false;
-  shins104taslah();
-  if (tasluur104 === true) {
-    shina110kv1rtaslah();
-    if (shins105 === true || shins103 === true) {
-      shina110kv2rzalgah();
-      shinsghtai104zalgah();
-      if (shins104 === false) {
-        shinsghtai104taslah();
-      }
-    }
-  } else {
-    shinsghtai104taslah();
-  }
-}
-
-//105 zalgah
 function ash105ZalgahButton() {
   ash105 = true;
   ash105zalgah();
-  if (shus105 === true) {
+  if (shus105) {
     gt105zalgah();
-    if (tasluur105 === true) {
+    if (tasluur105) {
       shinsghtai105zalgah();
-      if (shins104 === true || shins103 === true) {
+      if (shins105) {
         shina110kv1rzalgah();
+        shin1r105r = true;
       }
     }
   }
+  if (tois105) {
+    shinatoitzalgah();
+    toissh105r = true;
+  }
+}
+
+function ash105TaslahButton() {
+  ash105 = false;
+  ash105taslah();
+}
+
+function Tois105zalgahbutton() {
+  tois105 = true;
+  tois105zalgah();
+}
+
+function Tois105taslahbutton() {
+  tois105 = false;
+  tois105taslah();
 }
 
 function shus105ZalgahButton() {
   shus105 = true;
   shus105zalgah();
-  if (ash105 === true) {
-    gt105zalgah();
-    if (tasluur105 === true) {
-      shinsghtai105zalgah();
-      if (shins104 === true || shins103 === true) {
-        shina110kv1rzalgah();
-      }
-    }
-  }
-}
-
-function tasluur105ZalgahButton() {
-  tasluur105 = true;
-  tasluur105zalgah();
-  if (shus105 === true) {
-    gt105zalgah();
-    shinsghtai105zalgah();
-    if (shins104 === true || shins103 === true) {
-      shina110kv1rzalgah();
-    }
-  }
-}
-
-function shins105ZalgahButton() {
-  shins105 = true;
-  shins105zalgah();
-  if (tasluur105 === true) {
-    shina110kv1rzalgah();
-  }
-}
-
-//105 taslah
-
-function ash105TaslahButton() {
-  ash105 = false;
-  ash105taslah();
-  if (shus105 === true) {
-    gt105taslah();
-    if (tasluur105 === true) {
-      shinsghtai105taslah();
-      if (shins104 === true || shins103 === true) {
-        shina110kv1rtaslah();
-      }
-    }
-  }
 }
 
 function shus105TaslahButton() {
   shus105 = false;
   shus105taslah();
-  if (ash105 === true) {
-    gt105taslah();
-    if (tasluur105 === true) {
-      shinsghtai105taslah();
-      if (shins104 === true || shins103 === true) {
-        shina110kv1rtaslah();
-      }
-    }
-  }
+}
+
+function tasluur105ZalgahButton() {
+  tasluur105 = true;
+  tasluur105zalgah();
 }
 
 function tasluur105TaslahButton() {
   tasluur105 = false;
   tasluur105taslah();
-  if (shus105 === true) {
-    shinsghtai105taslah();
-    if (shins104 === true || shins103 === true) {
-      shina110kv1rtaslah();
-    }
-  }
+}
+
+function shins105ZalgahButton() {
+  shins105 = true;
+  shins105zalgah();
 }
 
 function shins105TaslahButton() {
   shins105 = false;
   shins105taslah();
-  if (tasluur105 === true) {
-    shina110kv1rtaslah();
-  }
-}
-
-// 106 zalgah taslah //
-
-function ash106ZalgahButton() {
-  ash106 = true;
-  ash106zalgah();
-  if (tois106 === true) {
-    shinatoitzalgah();
-  }
-  if (shus106 === true) {
-    gt106zalgah();
-    if (tasluur106 === true) {
-      shinsghtai106zalgah();
-      if (shins106 === true) {
-        shina110kv2rzalgah();
-      }
-    }
-  }
-}
-
-function ash106TaslahButton() {
-  ash106 = false;
-  ash106taslah();
-  if (tois106 === true) {
-    shinatoittaslah();
-  }
-  if (shus106 === true) {
-    gt106taslah();
-    if (tasluur106 === true) {
-      shinsghtai106taslah();
-      if (shins106 === true) {
-        shina110kv1rtaslah();
-        if (shins105 === true || shins103 === true) {
-          shina110kv2rzalgah();
-          shinsghtai106zalgah();
-          if (shins106 === false) {
-            shinsghtai106taslah();
-          }
-        }
-      }
-    }
-  }
-}
-
-function Tois106zalgahbutton() {
-  tois106 = true;
-  tois106zalgah();
-  if (ash106 === true) {
-    shinatoitzalgah();
-  }
-}
-
-function Tois106taslahbutton() {
-  tois106 = false;
-  tois106taslah();
-  if (ash106 === true) {
-    shinatoittaslah();
-  }
-}
-
-function shus106ZalgahButton() {
-  shus106 = true;
-  shus106zalgah();
-  if (ash106 === true) {
-    gt106zalgah();
-    if (tasluur106 === true) {
-      shinsghtai106zalgah();
-      if (shins106 === true) {
-        shina110kv2rzalgah();
-      }
-    }
-  }
-}
-
-function shus106TaslahButton() {
-  shus106 = false;
-  shus106taslah();
-  if (ash106 === true) {
-    gt106taslah();
-    if (tasluur106 === true) {
-      shinsghtai106taslah();
-      if (shins106 === true) {
-        shina110kv1rtaslah();
-        if (shins105 === true || shins103 === true) {
-          shina110kv2rzalgah();
-          shinsghtai106zalgah();
-          if (shins106 === false) {
-            shinsghtai106taslah();
-          }
-        }
-      }
-    }
-  }
-}
-
-function tasluur106ZalgahButton() {
-  tasluur106 = true;
-  tasluur106zalgah();
-  if (shus106 === true) {
-    gt106zalgah();
-    shinsghtai106zalgah();
-    if (shins106 === true) {
-      shina110kv2rzalgah();
-    }
-  }
-}
-
-function tasluur106TaslahButton() {
-  tasluur106 = false;
-  tasluur106taslah();
-  if (shus106 === true) {
-    shinsghtai106taslah();
-    if (shins106 === true) {
-      shina110kv1rtaslah();
-      if (shins105 === true || shins103 === true) {
-        shina110kv2rzalgah();
-        shinsghtai106zalgah();
-        if (shins106 === false) {
-          shinsghtai106taslah();
-        }
-      }
-    }
-  }
-}
-
-function shins106ZalgahButton() {
-  shins106 = true;
-  shins106zalgah();
-  if (tasluur106 === true) {
-    shina110kv2rzalgah();
-  }
-}
-
-function shins106TaslahButton() {
-  shins106 = false;
-  shins106taslah();
-  if (tasluur106 === true) {
-    shina110kv2rtaslah();
-    if (shins105 === true || shins103 === true) {
-      shina110kv2rzalgah();
-      shinsghtai106zalgah();
-      if (shins106 === false) {
-        shinsghtai106taslah();
-      }
-    }
-  } else {
-    shinsghtai106taslah();
-  }
 }
