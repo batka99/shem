@@ -884,6 +884,36 @@ function ash103ZalgahButton() {
     shinatoitzalgah();
     toissh103r = true;
   }
+  if (shin1r105r) {
+    if (shins103) {
+      shina110kv1rzalgah();
+      shinsghtai103zalgah();
+      if (tasluur103) {
+        gt103zalgah();
+        if (shus103) {
+          ash103zalgah();
+          if (tois103) {
+            shinatoitzalgah();
+            if (toissh105r) {
+              if (tois103) {
+                shinatoitzalgah();
+                ash103zalgah();
+                if (shus103) {
+                  gt103zalgah();
+                  if (tasluur103) {
+                    shinsghtai103zalgah();
+                    if (shins103) {
+                      shina110kv1rzalgah();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 function ash103TaslahButton() {
@@ -916,6 +946,36 @@ function ash103TaslahButton() {
       }
     }
   }
+  if (shin1r105r) {
+    if (shins103) {
+      shina110kv1rzalgah();
+      shinsghtai103zalgah();
+      if (tasluur103) {
+        gt103zalgah();
+        if (shus103) {
+          ash103zalgah();
+          if (tois103) {
+            shinatoitzalgah();
+            if (toissh105r) {
+              if (tois103) {
+                shinatoitzalgah();
+                ash103zalgah();
+                if (shus103) {
+                  gt103zalgah();
+                  if (tasluur103) {
+                    shinsghtai103zalgah();
+                    if (shins103) {
+                      shina110kv1rzalgah();
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 
 function Tois103zalgahbutton() {
@@ -940,12 +1000,26 @@ function Tois103zalgahbutton() {
   }
   if (shin1r105r) {
     if (shins103) {
+      shina110kv1rzalgah();
       shinsghtai103zalgah();
       if (tasluur103) {
         gt103zalgah();
         if (shus103) {
           ash103zalgah();
           shinatoitzalgah();
+          if (toissh105r) {
+            shinatoitzalgah();
+            ash103zalgah();
+            if (shus103) {
+              gt103zalgah();
+              if (tasluur103) {
+                shinsghtai103zalgah();
+                if (shins103) {
+                  shina110kv1rzalgah();
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -959,21 +1033,31 @@ function Tois103taslahbutton() {
     shinatoittaslah();
     if (toissh105r) {
       shinatoitzalgah();
-    }
-  }
-  if (ash103 === false || toissh105r) {
-    ash103taslah();
-    if (shus103) {
-      gt103taslah();
-      if (tasluur103) {
-        shinsghtai103taslah();
-        if (shins103) {
-          shina110kv1rtaslah();
-          shin1r105r = false;
+      ash103zalgah();
+      if (shus103) {
+        gt103zalgah();
+        if (tasluur103) {
+          shinsghtai103zalgah();
+          if (shins103) {
+            shina110kv1rzalgah();
+          }
         }
       }
     }
   }
+  // if (ash103 === false || toissh105r) {
+  //   ash103taslah();
+  //   if (shus103) {
+  //     gt103taslah();
+  //     if (tasluur103) {
+  //       shinsghtai103taslah();
+  //       if (shins103) {
+  //         shina110kv1rtaslah();
+  //         shin1r105r = false;
+  //       }
+  //     }
+  //   }
+  // }
 
   if (ash103 && toissh105r) {
     if (ash103 || toissh105r) {
@@ -990,11 +1074,25 @@ function Tois103taslahbutton() {
   }
   if (shin1r105r) {
     if (shins103) {
+      shina110kv1rzalgah();
+      shinsghtai103zalgah();
       if (tasluur103) {
+        gt103zalgah();
         if (shus103) {
+          ash103zalgah();
           shinatoittaslah();
           if (toissh105r) {
             shinatoitzalgah();
+            ash103zalgah();
+            if (shus103) {
+              gt103zalgah();
+              if (tasluur103) {
+                shinsghtai103zalgah();
+                if (shins103) {
+                  shina110kv1rzalgah();
+                }
+              }
+            }
           }
         }
       }
@@ -1024,6 +1122,19 @@ function shus103ZalgahButton() {
         ash103zalgah();
         if (tois103) {
           shinatoitzalgah();
+          if (toissh105r) {
+            shinatoitzalgah();
+            if (tois103) {
+              ash103zalgah();
+              gt103zalgah();
+              if (tasluur103) {
+                shinsghtai103zalgah();
+                if (shins103) {
+                  shina110kv1rzalgah();
+                }
+              }
+            }
+          }
         }
       }
     }
@@ -1045,12 +1156,24 @@ function shus103TaslahButton() {
   }
   if (shin1r105r) {
     if (shins103) {
+      shina110kv1rzalgah();
+      shinsghtai103zalgah();
       if (tasluur103) {
-        ash103taslah();
+        gt103zalgah();
         if (tois103) {
-          shinatoittaslah();
+          shinatoitzalgah();
           if (toissh105r) {
             shinatoitzalgah();
+            if (tois103) {
+              ash103zalgah();
+              gt103zalgah();
+              if (tasluur103) {
+                shinsghtai103zalgah();
+                if (shins103) {
+                  shina110kv1rzalgah();
+                }
+              }
+            }
           }
         }
       }
@@ -1104,12 +1227,22 @@ function tasluur103TaslahButton() {
           shinatoittaslah();
           if (toissh105r) {
             shinatoitzalgah();
+            if (tois103) {
+              ash103zalgah();
+              if (shus103) {
+                gt103zalgah();
+                shinsghtai103zalgah();
+                if (shins103) {
+                  shina110kv1rzalgah();
+                }
+              }
+            }
           }
         }
       }
     }
   }
-}
+} ////////////////end yvaa
 
 function shins103ZalgahButton() {
   shins103 = true;
@@ -1123,14 +1256,26 @@ function shins103ZalgahButton() {
     }
   }
   if (shin1r105r) {
-    if (shins103) {
-      shinsghtai103zalgah();
-      if (tasluur103) {
-        gt103zalgah();
-        if (shus103) {
-          ash103zalgah();
-          if (tois103) {
+    shinsghtai103zalgah();
+    shina110kv1rzalgah();
+    if (tasluur103) {
+      gt103zalgah();
+      if (shus103) {
+        ash103zalgah();
+        if (tois103) {
+          shinatoitzalgah();
+          if (toissh105r) {
             shinatoitzalgah();
+            if (tois103) {
+              ash103zalgah();
+              if (shus103) {
+                gt103zalgah();
+                if (tasluur103) {
+                  shinsghtai103zalgah();
+                  shina110kv1rzalgah();
+                }
+              }
+            }
           }
         }
       }
@@ -1160,6 +1305,16 @@ function shins103TaslahButton() {
           shinatoittaslah();
           if (toissh105r) {
             shinatoitzalgah();
+            if (tois103) {
+              ash103zalgah();
+              if (shus103) {
+                gt103zalgah();
+                if (tasluur103) {
+                  shinsghtai103zalgah();
+                  shina110kv1rzalgah();
+                }
+              }
+            }
           }
         }
       }
